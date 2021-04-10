@@ -23,4 +23,15 @@ function switchStatement(person){
     }
 
 }
-switchStatement(person)
+
+console.log(new Date().getDay(5))
+switch (new Date().getDay()) {
+    
+    case 0:
+        console.log("It is sunday")
+        break;
+
+    default:
+        console.log("Nothing Found")
+        break;
+}
