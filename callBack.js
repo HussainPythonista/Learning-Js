@@ -1,4 +1,5 @@
 //The function without the name is called callback function
+//Lambda function in python is Called callback in Javascript
 function callbackExample(name,callback){
     console.log(callback(name));
 }
