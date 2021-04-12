@@ -9,6 +9,7 @@ and 3 Types of methods
  */
 
 class Animal{
+    counter=0
     //const value=0 
     //we define the class variable outside the methods
     //All the object can access and use that variable
@@ -24,6 +25,9 @@ class Animal{
 
         this.type=type
         this.age=age
+        Animal.counter=Animal.counter+1//class Variable
+        //I can call wherever I want
+        
     }
     walk(){
         //This one is comon in all language
@@ -80,7 +84,7 @@ class Dog extends Animal{
 Animal.staticMethod()//We should call static like that
 
 
-animal.staticMethod()
+
 
 
 const cat=new Cat()
@@ -92,6 +96,6 @@ cat.catAge("Pussey Cat")
 const dog=new Dog()
 dog.type="dog"
 dog.age=2
-dog.dogAge("Bull dog")
+dog.dogAge("Bull Dog")
 
 
