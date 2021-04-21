@@ -39,8 +39,16 @@ class calculatePercentage:
     def displayPercentage(self):
         print(f"{self.name} has scored {self.marks}%")
     @classmethod
-    def percentage(cls,name,marks):
+    def percentage(cls,name,marks):#It will handle class inits and variables
         return cls(name,round(marks/600*100,2))
+    @staticmethod
+    def staticMethod(age):
+        if age>18:
+            print("He is eligible to fuck")
+        elif age==17:
+            print("get the fuck out of here")
+        else:
+            print("You do MasterBate")
 #percent=calculatePercentage()
 name="Mohamed Kalanthar Hussain"
 marks=572
@@ -50,9 +58,23 @@ marks=572
 ##Whenever i create the object I want to convert the marks in percentage
 #So i can perform same operation in class method also
 
-s2=calculatePercentage.percentage(name,marks)       
+s2=calculatePercentage.percentage(name,marks)#It directly deals with class       
 s2.displayPercentage()
 
 #In Instance method we pass the Object(self)
 #But In class Method we pass def name(cls)->class
 #We use Class Decorators @classmethod
+
+
+
+###StaticMethodDecorator
+#It is similar to the class method decorator
+#There is no need of metioning parameter,it is like a regular function 
+#But it belog to the class
+s2.staticMethod(17)
+
+
+#These are some common difference between static and class Methods
+
+#1.The static method knows nothing about class and object,This one is act as different inside the Same Class
+    #but class method has right to perform operation and change variable inside class
