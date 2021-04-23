@@ -71,11 +71,12 @@ const surnamepromise=new Promise((resolve,rejected)=>{
 Promise.all([namepromise,surnamepromise]).then(data=>{
    const [namepromise,surnamepromise]=data
    for (var i=0;i<namepromise.length;i++){
-       console.log(`${namepromise[i]},${surnamepromise[i]}`)
+       console.log(`${namepromise[i]} ${surnamepromise[i]}`)
    }
 }).catch(error=>{
     console.log(error)
 });
+
 
 
 
